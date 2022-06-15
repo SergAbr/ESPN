@@ -1,0 +1,34 @@
+@import "bootstrap";
+@import "compass";
+@import "icons";
+
+/* Tooltips */
+.tooltip, .fade, bottom, .in, {
+  margin: 22px 0 0 -5px !important;
+  opacity: 1 !important;
+  .tooltip-arrow {
+    display: none;
+  }
+  .tooltip-inner {
+    background: #ffffff;
+    position: relative;
+    max-width: 500px;
+    padding: 12px 10px 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    color: #747b91;
+    @include border-radius(0px);
+    @include box-shadow(0px 0px 5px 1px rgba(0, 0, 0, 0.1));
+  }
+  &.left { margin: 70px 0 0 -3px !important; }
+}
+
+/* For webkit Chrome&Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .tooltip, .fade, bottom, .in, {
+    margin: 22px 0 0 205px !important;
+    &.left { margin: 70px 0 0 435px !important; }
+  }
+}

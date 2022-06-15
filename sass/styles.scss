@@ -1,0 +1,391 @@
+@import "bootstrap";
+@import "compass";
+//@import "icons";
+
+body {
+  background: #fff7e6;
+  font-family: cursive;
+  &.login { background: #f7f7f7; }
+}
+
+/*button*/
+.btn-black {
+  padding: 4px 14px;
+  text-decoration: none;
+  height: 18px;
+  border-radius: 0px;
+  border: 2px solid #3b3736;
+  text-decoration: none;
+  color: #6f6a62;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  &:hover {
+    background: transparent;
+    color: #6f6a62;
+    text-decoration: none;
+    @include box-shadow(2px 2px 1px 0px rgba(0, 0, 0, 1));
+  }
+  &:active {
+    @include box-shadow(none)
+  }
+  &.gr {
+    padding: 2px 7px;
+    background: #d5ccbe;
+    color: #000000;
+  }
+}
+
+/* Checkbox */
+
+.checkbox {
+  padding: 10px 0 0px 18px;
+}
+
+input[type=checkbox].css-checkbox {
+  display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 30px;
+  height: 20px;
+  display: inline-block;
+  line-height: 18px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 14px;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #000000;
+  float: left;
+}
+
+label { margin-bottom: 2px; }
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -20px;
+}
+
+.css-label{ background-image:url(http://csscheckbox.com/checkboxes/web-two-style.png); }
+
+/*HR*/
+.bold {
+  height: 4px;
+  border-top: 4px;
+  background: #6a6566;
+}
+.norm {
+  height: 2px;
+  border-top: 2px;
+  background: #a89f9b;
+}
+
+#header {
+  padding: 15px 105px;
+  background: #fffeed;
+  @include box-shadow( 0px 3px 0px rgba(50, 50, 50, 0.1));
+  .container-fluid {
+    .logo {
+      float: left;
+      @include pie-clearfix;
+    }
+    .user {
+      float: left;
+      margin-top: 10px;
+      margin-left: 40px;
+      color: #a8a292;
+    }
+    .top-menu {
+      float: right;
+      ul {
+        margin-top: 10px;
+        float: left;
+        list-style: none;
+        font-weight: 600;
+        li {
+          float: left;
+          margin-left: 30px;
+          &:first-child { margin-left: 0; }
+          a {
+            padding: 10px 8px;
+            color: #000000;
+            text-decoration: none;
+            &:hover {
+              background: #a1988f;
+              color: #ffffff;
+              @include border-radius(5px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.login-head { background: #ffffff !important; }
+
+#body {
+  padding: 20px 120px 120px;
+  .container-fluid {
+    background: #ffffed;
+    @include box-shadow(inset 0px 0px 0px 3px rgba(50, 50, 50, 0.1));
+    .title {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #000000;
+      font-weight: 700;
+    }
+    .export {
+      margin: 15px 0 0 56px;
+      .txt {
+        float: left;
+        margin: 5px 35px 0 0;
+        font-weight: 700;
+      }
+      .select {
+        margin: 0;
+        select {
+          width: 70%;
+          border-radius: 0px;
+          border: 2px solid #3b3736;
+          color: #252421;
+          font-weight: 700;
+          margin: 0;
+        }
+      }
+    }
+    .btn-success {
+      display: none;
+      float: right;
+      margin-top: -25px;
+      &.al {
+        display: block;
+        margin-top: 15px;
+      }
+    }
+    #left-col {
+      float: left;
+      width: 200px;
+      .left-tab {
+        #myTab-l {
+          list-style: none;
+          margin: 0;
+          li {
+            padding: 5px 0 5px 10px;
+            a {
+              color: #000000;
+              font-weight: 700;
+              text-decoration: none;
+            }
+            &.active {
+              background: #d5ccbe;
+            }
+          }
+        }
+      }
+    }
+    .content {
+      color: #6f6a62;
+      margin: 0 0 20px 210px;
+      border-left: 2px solid #e1dacf;
+      padding: 0 0 30px 40px;
+      .tab-content {
+        #profile {
+          overflow: hidden;
+          .content-header {
+            background: #faeddd;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 10px 0 0 0;
+          }
+          .tab_title {
+            padding: 10px 0 0 0;
+            font-size: 16px;
+            margin-bottom: 30px;
+          }
+          .row-fluid {
+            margin-bottom: 20px;
+            .date { padding: 0 0 0 15px; }
+            .admin { text-align: center; }
+            .offset4 {
+              margin-bottom: 5px;
+            }
+            input {
+              border-radius: 0px;
+              border: 2px solid #3b3736;
+              color: #252421;
+              font-weight: 700;
+              margin: 0;
+              color: #000000;
+            }
+            .select {
+              margin: 0;
+              select {
+                width: 50%;
+                border-radius: 0px;
+                border: 2px solid #3b3736;
+                color: #252421;
+                font-weight: 700;
+                margin: 0;
+              }
+            }
+            .pagination {
+              margin-top: 10px;
+              ul {
+                @include box-shadow(none);
+                li {
+                  float: left;
+                  border-left: 1px solid #000000;
+                  &:first-child { border-left: none; }
+                  a {
+                    background: transparent;
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+          &.al {
+            .bold { margin-top: -10px !important; }
+          }
+        }
+        #users {
+          overflow: hidden;
+          .content-header {
+            background: #faeddd;
+            font-size: 16px;
+            font-weight: 700;
+            .css-label {
+              color: #6f6a62;
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+          .row-fluid {
+            padding: 10px 0 0 15px;
+            .select {
+              margin-top: -5px;
+              select {
+                width: 80%;
+                border-radius: 0px;
+                border: 2px solid #3b3736;
+                color: #252421;
+                font-weight: 700;
+                margin: 0;
+              }
+            }
+            .checkbox {
+              padding: 0;
+              .css-label {
+                min-height: 20px;
+                margin: 0;
+              }
+            }
+            .edit {
+              text-align: center;
+              .btn { float: none; }
+            }
+          }
+          .alerts { color: #000000; }
+          .btn-group > .btn {
+            margin-bottom: 5px;
+            border: 2px solid #3b3736;
+            font-weight: 600;
+            margin-left: 0;
+            outline: none;
+            @include border-radius(0px);
+          }
+          .btn.active, .btn:active {
+            background-image: none;
+            outline: 0 none;
+            background-position: 0 0;
+            text-shadow: none;
+            color: #ffffff;
+            @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.15) inset, 0 1px 2px rgba(0, 0, 0, 0.05));
+            @include gradient-vertical(#62c462, #51a351);
+          }
+          .edit {
+            .btn-black {
+              margin-top: 0px;
+              background-color: #d5ccbe;
+              background-position: 0 0;
+              padding: 0px 16px 18px;
+              font-size: 14px;
+              font-weight: 700;
+              color: #000000;
+              @include border-radius(0px);
+              @include gradient-vertical(#d5ccbe,#d5ccbe);
+            }
+          }
+          .bold {
+            height: 3px;
+            margin: 0px;
+          }
+          .btn-black {
+            float: left;
+            color: #ffffff;
+            text-shadow: none;
+            margin: 10px 0;
+            @include gradient-vertical(#ee5f5b,#bd362f);
+            &.red {
+              &:active {
+                @include gradient-vertical(#ee5f5b,#bd362f);
+              }
+            }
+          }
+          .pagination {
+            margin-top: 10px;
+            ul {
+              @include box-shadow(none);
+              li {
+                float: left;
+                border-left: 1px solid #000000;
+                &:first-child { border-left: none; }
+                a {
+                  background: transparent;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.division {
+        margin-left: 10px;
+        border-left: none;
+        padding-left: 0;
+        #users {
+          .row-fluid {
+            padding-top: 0;
+            .checkbox { margin-top: 13px; }
+            .select { margin-top: 13px; }
+            .admin {
+              margin-top: 13px;
+              text-align: center;
+              .btn-black {
+                float: none;
+                padding: 2px 7px;
+                background: #d5ccbe;
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.onlogin {
+      padding: 40px 200px 70px;
+      background: #ffffff;
+      .row-fluid {
+        margin-bottom: 20px;
+        input {
+          border-radius: 0px;
+          border: 2px solid #3b3736;
+          color: #252421;
+          font-weight: 700;
+          margin: 0;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
